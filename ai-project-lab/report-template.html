@@ -1,0 +1,136 @@
+const projectData = [
+  { id: 1, title: 'เว็บไซต์แนะนำร้านกาแฟสไตล์วัยรุ่น', category: 'web', level: 'easy', description: 'สร้าง landing page สวยและใช้งานง่ายสำหรับร้านกาแฟวัยรุ่น' },
+  { id: 2, title: 'เว็บไซต์แนะนำเกมมือถือยอดนิยม', category: 'web', level: 'medium', description: 'แสดงเกมโดดเด่น รีวิวเกม และรายการที่น่าสนใจสำหรับนักเรียน' },
+  { id: 3, title: 'เว็บไซต์เก็บรายการหนังที่ชอบ', category: 'web', level: 'easy', description: 'สามารถเพิ่ม ลบ แก้ไข และค้นหาหนังที่ชอบได้' },
+  { id: 4, title: 'เว็บไซต์แนะนำสถานที่ท่องเที่ยวในจังหวัด', category: 'web', level: 'easy', description: 'จัดทำข้อมูลสถานที่ท่องเที่ยวพร้อมภาพและรีวิวสั้น' },
+  { id: 5, title: 'เว็บไซต์จัดการงานบ้านในครัวเรือน', category: 'web', level: 'medium', description: 'มีรายการงานบ้าน สถานะความสำเร็จ และติดตามการทำงาน' },
+  { id: 6, title: 'เว็บไซต์จัดการงานกลุ่มนักศึกษา', category: 'web', level: 'medium', description: 'จัดสรรงานและติดตามความคืบหน้าของกลุ่ม' },
+  { id: 7, title: 'เว็บไซต์เช็คราคาและโปรโมชั่นออนไลน์', category: 'web', level: 'medium', description: 'สื่อสารโปรโมชั่นและข้อมูลสินค้าด้วยดีไซน์ที่ชวนคลิก' },
+  { id: 8, title: 'เว็บไซต์ร้านคอมพิวเตอร์และอุปกรณ์ไอที', category: 'web', level: 'medium', description: 'แสดงสินค้า อุปกรณ์ และป้ายโปรโมชันสำหรับนักเรียน' },
+  { id: 9, title: 'เว็บไซต์สรุปข่าวสำหรับวัยรุ่น', category: 'web', level: 'easy', description: 'แสดงข่าวสั้นและสรุปเป็นประเด็นหลัก' },
+  { id: 10, title: 'เว็บไซต์แนะนำคอนเสิร์ตและเทศกาล', category: 'web', level: 'easy', description: 'โชว์ไทม์ไลน์กิจกรรมและข้อมูลที่สำคัญ' },
+
+  { id: 11, title: 'โปรแกรมสรุปค่าใช้จ่ายรายวัน', category: 'app', level: 'easy', description: 'บันทึกรายรับรายจ่ายและคำนวณยอดรวม' },
+  { id: 12, title: 'โปรแกรมจัดการตารางเวลาเรียน', category: 'app', level: 'medium', description: 'จัดตารางเรียนและเวลาพักแบบง่ายและเป็นประโยชน์' },
+  { id: 13, title: 'โปรแกรมคำนวณค่าเรียนของนักศึกษา', category: 'app', level: 'easy', description: 'คำนวณค่าใช้จ่ายต่าง ๆ แบบสะท้อนภาพรวม' },
+  { id: 14, title: 'โปรแกรมบันทึกเป้าหมายชีวิต', category: 'app', level: 'medium', description: 'คอยติดตามเป้าหมายและความก้าวหน้า' },
+  { id: 15, title: 'โปรแกรมฝึกภาษาไทยและภาษาอังกฤษ', category: 'app', level: 'medium', description: 'มีข้อคำถามแบบสุ่มและการให้คะแนน' },
+  { id: 16, title: 'โปรแกรมจัดการการทำงานกลุ่ม', category: 'app', level: 'medium', description: 'ช่วยแบ่งงานและติดตามความคืบหน้า' },
+  { id: 17, title: 'โปรแกรมบันทึกไอเดียและความคิด', category: 'app', level: 'easy', description: 'เก็บความคิดและจัดหมวดหมู่แบบสบาย ๆ' },
+  { id: 18, title: 'โปรแกรมคำนวณค่าอุปกรณ์และค่าใช้จ่าย', category: 'app', level: 'easy', description: 'ใช้งานง่ายสำหรับนักเรียนที่ต้องการคำนวณค่าใช้จ่าย' },
+
+  { id: 19, title: 'เกมตอบคำถามเรื่องไอที', category: 'game', level: 'easy', description: 'เกมคำถามเรื่องคอมพิวเตอร์และเทคโนโลยี' },
+  { id: 20, title: 'เกมยิงศัตรูแบบง่าย', category: 'game', level: 'easy', description: 'คลิกเพื่อยิงและเก็บคะแนนแบบเร็ว' },
+  { id: 21, title: 'เกมจับคู่ภาพ', category: 'game', level: 'easy', description: 'จับคู่ภาพเพื่อเพิ่มคะแนนและใช้เวลา' },
+  { id: 22, title: 'เกมคำนวณและกดปุ่มเร็ว', category: 'game', level: 'easy', description: 'คำนวณคำตอบให้เร็วเพื่อเก็บคะแนน' },
+  { id: 23, title: 'เกมเรียงคำและสมอง', category: 'game', level: 'medium', description: 'เรียงคำให้ถูกต้องและค่อย ๆ เร่งความยาก' },
+  { id: 24, title: 'เกมบิวด์เมืองเล็กๆ', category: 'game', level: 'hard', description: 'สร้างเมืองและจัดสรรต้นทุนเพื่อความมั่นคง' },
+  { id: 25, title: 'เกมผจญภัยในเมือง', category: 'game', level: 'medium', description: 'สำรวจสถานที่และรับภารกิจแบบเล่าต่อเนื่อง' },
+  { id: 26, title: 'เกมประลองความเร็ว', category: 'game', level: 'medium', description: 'การแข่งขันตอบคำถามและกดปุ่มแบบทันที' },
+
+  { id: 27, title: 'AI ช่วยสรุปบทเรียน', category: 'ai', level: 'easy', description: 'ป้อนข้อความแล้ว AI สรุปเป็นประเด็นสำคัญ' },
+  { id: 28, title: 'AI ช่วยเขียนคอนเทนต์ TikTok', category: 'ai', level: 'easy', description: 'สร้างสคริปต์ แนวคิด และแคปชั่นสำหรับโพสต์' },
+  { id: 29, title: 'AI สร้างภาพโปสเตอร์', category: 'ai', level: 'medium', description: 'ออกแบบภาพสั้น ๆ สำหรับโฆษณาและกิจกรรม' },
+  { id: 30, title: 'AI สร้างสติกเกอร์และภาพประกอบ', category: 'ai', level: 'easy', description: 'สร้างสติกเกอร์หรือภาพแสดงความคิดได้ทันที' },
+  { id: 31, title: 'AI สร้างชื่อแอปและโลโก้', category: 'ai', level: 'easy', description: 'ช่วยระดมไอเดียชื่อสินค้าและโลโก้' },
+  { id: 32, title: 'AI ช่วยทำแผนกีฬาส่วนตัว', category: 'ai', level: 'medium', description: 'สร้างแผนซ้อมและกิจกรรมออกกำลังกาย' },
+  { id: 33, title: 'AI ช่วยทำสรุปข้อมูลสำรวจ', category: 'ai', level: 'medium', description: 'แปลงข้อมูลยาวเป็นสรุปทันที' },
+
+  { id: 34, title: 'เครื่องมือสร้างคอนเทนต์ TikTok', category: 'social', level: 'easy', description: 'สุ่มไอเดียและสร้างแคปชั่นสำหรับโพสต์สั้น' },
+  { id: 35, title: 'เครื่องมือสร้างภาพโปสเตอร์เพจ', category: 'social', level: 'easy', description: 'จัดทำการ์ดโปรโมชั่นและภาพสั้นสำหรับโพสต์' },
+  { id: 36, title: 'AI สร้างคอนเทนต์วันเกิดและเทศกาล', category: 'social', level: 'easy', description: 'สร้างข้อความโฆษณาและบรรยากาศของงานเทศกาล' },
+  { id: 37, title: 'AI สร้างคำไอเดียเพจโรงเรียน', category: 'social', level: 'medium', description: 'generate ideas for student page and school news' },
+  { id: 38, title: 'AI ช่วยสร้างแคปชั่นและสโลแกน', category: 'social', level: 'easy', description: 'เชื่อมข้อความให้เหมาะกับสไตล์เพจ' },
+
+  { id: 39, title: 'เว็บไซต์ร้านหนังสือออนไลน์', category: 'business', level: 'medium', description: 'แสดงสินค้า ประชาสัมพันธ์ และเพิ่มตะกร้าสินค้า' },
+  { id: 40, title: 'เว็บไซต์ร้านเสื้อผ้าสไตล์วัยรุ่น', category: 'business', level: 'medium', description: 'ดีไซน์โทนสีและจัดหมวดสินค้า' },
+  { id: 41, title: 'เว็บไซต์ร้านอาหารสไตล์คาเฟ่', category: 'business', level: 'medium', description: 'เมนูสินค้าและการจองโต๊ะแบบสั้น' },
+  { id: 42, title: 'เว็บไซต์ขายของออนไลน์แบบมีหมวดหมู่', category: 'business', level: 'medium', description: 'โครงสร้างเว็บไซต์ขายสินค้าแบบมืออาชีพ' },
+  { id: 43, title: 'เว็บไซต์ประกาศรับสมัครงาน', category: 'business', level: 'medium', description: 'โครงสร้างเว็บกับข้อมูลอาชีพและคำขอสมัครงาน' },
+
+  { id: 44, title: 'โปรแกรมจัดการคอมพิวเตอร์/อุปกรณ์', category: 'it', level: 'medium', description: 'บันทึกอุปกรณ์ ตรวจสอบสถานะ และประวัติการใช้งาน' },
+  { id: 45, title: 'AI ช่วยสรุปข้อผิดพลาดของโค้ด', category: 'it', level: 'medium', description: 'อธิบายสาเหตุและแนะนำการแก้ไข' },
+  { id: 46, title: 'โปรแกรมตรวจสอบความเร็วอินเทอร์เน็ต', category: 'it', level: 'easy', description: 'แสดงข้อมูลระดับสัญญาณและประสิทธิภาพ' },
+  { id: 47, title: 'เว็บสรุปวิธีแก้ปัญหาอุปกรณ์ทั่วไป', category: 'it', level: 'easy', description: 'รวมวิธีแก้ปัญหาที่ใช้งานได้จริง' },
+  { id: 48, title: 'AI ช่วยสร้างคู่มือการใช้อุปกรณ์', category: 'it', level: 'medium', description: 'ช่วยสรุปและจัดทำคู่มือใช้งานง่าย ๆ' },
+
+  { id: 49, title: 'เว็บสรุปข้อมูลและแปลผลแบบง่าย', category: 'research', level: 'easy', description: 'แปลงข้อมูลเป็นสรุปแบบเข้าใจง่าย' },
+  { id: 50, title: 'เว็บไซต์แสดงผลรายงานเชิงการตลาด', category: 'research', level: 'medium', description: 'สรุปข้อมูลสัดส่วนและความนิยมเป็น dashboard' },
+  { id: 51, title: 'AI ช่วยแปลงข้อมูลเป็นแผนภูมิ', category: 'research', level: 'medium', description: 'สร้าง graph และ chart ให้เห็นภาพรวม' },
+  { id: 52, title: 'AI ช่วยเขียนรายงานสรุปผลสำรวจ', category: 'research', level: 'medium', description: 'transform survey data into readable report' },
+  { id: 53, title: 'ระบบจัดเก็บข้อมูลแบบ dashboard', category: 'research', level: 'hard', description: 'จัดเก็บและวิเคราะห์ข้อมูลหลายด้านพร้อมแผนภูมิ' },
+
+  { id: 54, title: 'เว็บไซต์ “คนหิวต้มมาม่า” แบบเสียดสีสังคม', category: 'creative', level: 'medium', description: 'การสร้างเว็บขำ ๆ ที่เลียนแบบความคิดสังคม' },
+  { id: 55, title: 'เกมสุ่มผลสำเร็จแบบน่าหัวเราะ', category: 'creative', level: 'easy', description: 'เกมสุ่มผลลัพธ์ความสำเร็จแบบตลกและมีสีสัน' },
+  { id: 56, title: 'โปรแกรมสร้างเรื่องสั้นจากประโยคที่ใส่', category: 'creative', level: 'medium', description: 'แปลงประโยคให้กลายเป็นเรื่องสั้นหรือสตอรี่' },
+  { id: 57, title: 'AI สร้างการ์ตูนสั้นแบบพากย์', category: 'creative', level: 'medium', description: 'สร้างความบันเทิงและสื่อสั้นสำหรับคนรุ่นใหม่' },
+  { id: 58, title: 'โปรแกรมสร้างชื่อตัวละครเล่นเกม', category: 'creative', level: 'easy', description: 'สุ่มชื่อ บทบาท และบุคลิกของตัวละคร' },
+  { id: 59, title: 'เกมจับคู่ภาพแบบนิสัยเด็ก', category: 'game', level: 'easy', description: 'เกมง่ายและเย้ายวนใจสำหรับนักเรียน' },
+  { id: 60, title: 'AI ช่วยสรุปแนวคิดธุรกิจแบบง่าย', category: 'ai', level: 'medium', description: 'ช่วยคิดไอเดียและสรุปให้เป็นแผนการ' }
+];
+
+const categoryNames = {
+  all: 'ทุกหมวด',
+  web: 'เว็บ/เว็บไซต์',
+  app: 'โปรแกรม/แอป',
+  game: 'เกม',
+  ai: 'AI & สื่อ',
+  social: 'Social Media',
+  business: 'ธุรกิจ',
+  it: 'ไอที / Support',
+  research: 'รายงาน/ข้อมูล',
+  creative: 'สร้างสรรค์'
+};
+
+const levelNames = {
+  all: 'ทุกระดับ',
+  easy: 'ง่าย',
+  medium: 'กลาง',
+  hard: 'ยาก'
+};
+
+function generateProject() {
+  const category = document.getElementById('categorySelect').value;
+  const level = document.getElementById('levelSelect').value;
+
+  const filtered = projectData.filter((project) => {
+    const categoryOk = category === 'all' || project.category === category;
+    const levelOk = level === 'all' || project.level === level;
+    return categoryOk && levelOk;
+  });
+
+  const project = filtered[Math.floor(Math.random() * filtered.length)] || projectData[0];
+
+  document.getElementById('projectCategory').textContent = categoryNames[project.category];
+  document.getElementById('projectDifficulty').textContent = levelNames[project.level];
+  document.getElementById('projectTitle').textContent = project.title;
+  document.getElementById('projectDescription').textContent = project.description;
+
+  const thaiPrompt = `สร้าง${project.title} ให้เป็นผลงานที่ใช้ HTML CSS JavaScript และสามารถเปิดใช้งานได้ทันทีบน browser สำหรับนักศึกษาปวช. ควรมี UI ที่สวย ง่ายต่อการใช้งาน เหมาะกับมือถือ มีฟังก์ชันหลักอย่างน้อย 3 อย่าง และสามารถอธิบายวัตถุประสงค์ วิธีใช้งาน และประโยชน์ได้เป็นภาษาไทย`; 
+
+  const englishPrompt = `Create ${project.title} as a practical project using HTML, CSS, and JavaScript. It should run in a browser, be mobile responsive, visually appealing, and include at least 3 core functions with clear value for students and end users.`;
+
+  document.getElementById('thaiPrompt').textContent = thaiPrompt;
+  document.getElementById('englishPrompt').textContent = englishPrompt;
+}
+
+function copyText(targetId) {
+  const target = document.getElementById(targetId);
+  const text = target.textContent;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const button = document.querySelector(`[data-copy-target="${targetId}"]`);
+    const originalText = button.textContent;
+    button.textContent = 'คัดลอกแล้ว';
+    setTimeout(() => {
+      button.textContent = originalText;
+    }, 1200);
+  });
+}
+
+document.getElementById('generateBtn').addEventListener('click', generateProject);
+document.querySelectorAll('.copy-btn').forEach((button) => {
+  button.addEventListener('click', () => copyText(button.dataset.copyTarget));
+});
+
+generateProject();
