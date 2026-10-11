@@ -1,169 +1,117 @@
-<!DOCTYPE html>
-<html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Project Lab สำหรับนักศึกษา ปวช.</title>
-    <meta name="description" content="ระบบสั่งงาน AI แบบใช้ได้จริง สำหรับนักศึกษาฝึกงาน ปวช. คอมพิวเตอร์" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container nav">
-        <div class="brand"><span class="dot"></span><span>AI Project Lab</span></div>
-        <nav>
-          <a href="index.html">หน้าแรก</a>
-          <a href="assignment-sheet.html">ใบงาน</a>
-          <a href="prompt-guide.html">Prompt Guide</a>
-          <a href="project-catalog.html">คลังงาน</a>
-        </nav>
-      </div>
-    </header>
+# AI Project Lab สำหรับนักศึกษาฝึกงาน ปวช. คอมพิวเตอร์
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="label">AI FOR VOCATIONAL STUDENTS</p>
-            <h1>สั่งงาน AI อย่างเป็นระบบ ทำผลงานได้จริง</h1>
-            <p>
-              เว็บไซต์นี้ออกแบบสำหรับนักศึกษาฝึกงาน ปวช. สาขาคอมพิวเตอร์
-              ที่ต้องการให้ AI ช่วยสร้างผลงานได้ทั้งเว็บ เกม โปรแกรม AI และโซเชียลมีเดีย
-              โดยมีโจทย์ให้เลือกมากกว่า 100 งาน พร้อม prompt ภาษาไทยและภาษาอังกฤษ
-            </p>
-            <div class="cta-group">
-              <a class="primary-btn" href="assignment-sheet.html">ดูใบงาน</a>
-              <a class="secondary-btn" href="prompt-guide.html">ดู Prompt Guide</a>
-            </div>
-            <ul class="stats">
-              <li><strong>100+</strong><span>โจทย์งาน</span></li>
-              <li><strong>9</strong><span>หมวดหมู่</span></li>
-              <li><strong>ฟรี</strong><span>AI Tools</span></li>
-            </ul>
-          </div>
+ระบบสั่งงาน AI แบบใช้งานจริง เพื่อให้ครูและนักศึกษาฝึกงานสามารถใช้งานได้ทันที โดยมีวัตถุประสงค์หลักดังนี้:
 
-          <div class="hero-panel">
-            <div class="panel-card">
-              <div class="mini-header"><span class="pulse"></span>Prompt Generator</div>
-              <h3>เลือกคะแนนงานที่อยากทำ แล้วให้ AI สร้างผลงานให้</h3>
-              <div class="sample-box">
-                <p>ตัวอย่าง</p>
-                <small>“สร้างเว็บไซต์ร้านกาแฟสไตล์วัยรุ่น ใช้ HTML CSS JS และเปิดได้ทันที”</small>
-              </div>
-              <div class="mini-tags">
-                <span>เว็บ</span>
-                <span>เกม</span>
-                <span>AI</span>
-                <span>ธุรกิจ</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+- ใช้ AI ฟรีเป็นเครื่องมือช่วยในการสร้างผลงานจริง
+- ฝึกทักษะการสั่งงาน AI อย่างเป็นระบบ
+- สร้างโจทย์ที่หลากหลาย เหมาะกับนักศึกษารุ่นเยาว์
+- มีงานที่สนุกและนำไปอวดเพื่อน อาจารย์ และผู้สัมภาษณ์ได้
+- เหมาะกับการทำฝึกงาน 4 เดือน และส่งผลงานในรูปแบบรายงานภาษาไทย
 
-      <section class="categories">
-        <div class="container">
-          <div class="section-head">
-            <p class="label">ชัดเจนและใช้งานง่าย</p>
-            <h2>นักศึกษาสามารถเลือกได้ตามความสนใจ</h2>
-          </div>
-          <div class="category-grid">
-            <div class="category-card"><h3>เว็บ/เว็บไซต์</h3><p>ร้านกาแฟ เกม โปรโมชั่น สถานที่ท่องเที่ยว</p></div>
-            <div class="category-card"><h3>แอป/โปรแกรม</h3><p>บันทึกค่าใช้จ่าย จัดการเวลา และระบบประสิทธิภาพ</p></div>
-            <div class="category-card"><h3>เกม</h3><p>เกมตอบคำถาม เกมจับคู่ เกมผจญภัย และเกมชิงชัย</p></div>
-            <div class="category-card"><h3>AI & สื่อ</h3><p>สื่อภาพ สรุปบทเรียน สร้างคอนเทนต์ และแชทบอท</p></div>
-            <div class="category-card"><h3>Social Media</h3><p>โพสต์ เว็บไซต์สรุปคอนเทนต์ AI และคอนเทนต์วันเทศกาล</p></div>
-            <div class="category-card"><h3>ธุรกิจ</h3><p>ร้านค้าออนไลน์ อุปกรณ์ไอที พลังงานทางการตลาด</p></div>
-            <div class="category-card"><h3>ไอที</h3><p>บอทคำถาม อุปกรณ์ PC ปัญหาเครือข่าย และแม้กระทั่งคอมพิวเตอร์</p></div>
-            <div class="category-card"><h3>รายงาน</h3><p>สรุปผลสำรวจ dashboard และรายงานข้อมูล</p></div>
-            <div class="category-card"><h3>สร้างสรรค์</h3><p>เรื่องสั้น การ์ตูน คำคม เกมนิยาย และคอนเทนต์เอาใจวัยรุ่น</p></div>
-          </div>
-        </div>
-      </section>
+## โครงสร้างโปรเจกต์
 
-      <section class="generator">
-        <div class="container generator-wrap">
-          <div class="section-head left">
-            <p class="label">สุ่มโจทย์</p>
-            <h2>สุ่มงานให้ตรงความสนใจได้ทันที</h2>
-          </div>
+- README.md
+- ai-project-lab/index.html
+- ai-project-lab/assignment-sheet.html
+- ai-project-lab/prompt-guide.html
+- ai-project-lab/project-catalog.html
+- ai-project-lab/teacher-guide.html
+- ai-project-lab/styles.css
+- ai-project-lab/script.js
 
-          <div class="controls">
-            <label>
-              หมวดหมู่
-              <select id="categorySelect">
-                <option value="all">ทุกหมวด</option>
-                <option value="web">เว็บ/เว็บไซต์</option>
-                <option value="app">โปรแกรม/แอป</option>
-                <option value="game">เกม</option>
-                <option value="ai">AI & สื่อ</option>
-                <option value="social">Social Media</option>
-                <option value="business">ธุรกิจ</option>
-                <option value="it">ไอที / Support</option>
-                <option value="research">รายงาน/ข้อมูล</option>
-                <option value="creative">สร้างสรรค์</option>
-              </select>
-            </label>
+## หน้าเว็บไซต์ที่พร้อมใช้งาน
 
-            <label>
-              ระดับความยาก
-              <select id="levelSelect">
-                <option value="all">ทุกระดับ</option>
-                <option value="easy">ง่าย</option>
-                <option value="medium">กลาง</option>
-                <option value="hard">ยาก</option>
-              </select>
-            </label>
+1. หน้าแรก: หน้าแนะนำระบบและสุ่มโจทย์
+2. ใบงาน: รายละเอียดงานและกติกา
+3. Prompt Guide: วิธีสั่ง AI ให้ได้ผลตรงตามที่ต้องการ
+4. Project Catalog: คลังโจทย์งานหลายหมวด
+5. Teacher Guide: แนวทางให้ครูประเมินและสั่งงาน
 
-            <button id="generateBtn" class="primary-btn">สุ่มโจทย์</button>
-          </div>
+## เครื่องมือ AI ฟรีที่แนะนำ
 
-          <div class="result-card">
-            <div class="result-header">
-              <span class="badge" id="projectCategory">หมวด</span>
-              <span class="badge alt" id="projectDifficulty">ระดับ</span>
-            </div>
-            <h3 id="projectTitle">ชื่อโครงการ</h3>
-            <p id="projectDescription">เลือกหมวดและกดสุ่มเพื่อดูโจทย์สั่งงาน</p>
+- ChatGPT
+- Gemini
+- Claude
+- DeepSeek
+- Perplexity
+- Copilot
+- OpenRouter
+- Codeium
+- Canva AI
+- Leonardo AI
+- Microsoft Designer
+- CapCut AI
+- Replit AI
+- Hugging Face
+- Ollama / LM Studio
 
-            <div class="prompt-box">
-              <strong>Prompt ภาษาไทย</strong>
-              <p id="thaiPrompt">-</p>
-              <button class="copy-btn" data-copy-target="thaiPrompt">คัดลอก Prompt ไทย</button>
-            </div>
+## หมวดโจทย์ที่ครอบคลุม
 
-            <div class="prompt-box">
-              <strong>Prompt ภาษาอังกฤษ</strong>
-              <p id="englishPrompt">-</p>
-              <button class="copy-btn" data-copy-target="englishPrompt">คัดลอก Prompt EN</button>
-            </div>
-          </div>
-        </div>
-      </section>
+- เว็บ/เว็บไซต์
+- โปรแกรม/แอป
+- เกม
+- AI และสื่อ
+- Social Media
+- ธุรกิจและการตลาด
+- ไอทีและงานซ่อมบำรุง
+- งานวิจัยและรายงาน
+- งานสร้างสรรค์และความบันเทิง
 
-      <section class="tips">
-        <div class="container">
-          <div class="section-head">
-            <p class="label">AI ฟรีเพื่อการศึกษา</p>
-            <h2>เครื่องมือที่สามารถใช้ได้ตอนนี้</h2>
-          </div>
-          <div class="tool-grid">
-            <div class="tool-card"><h3>AI Chat</h3><p>ChatGPT, Gemini, DeepSeek, Claude, Perplexity</p></div>
-            <div class="tool-card"><h3>เขียนโค้ด</h3><p>Copilot, OpenRouter, Codeium, Replit AI</p></div>
-            <div class="tool-card"><h3>สร้างภาพ</h3><p>Canva AI, Leonardo AI, Microsoft Designer</p></div>
-            <div class="tool-card"><h3>วิดีโอ/สื่อ</h3><p>CapCut AI, Runway, Pika (โหมดฟรี)</p></div>
-          </div>
-        </div>
-      </section>
-    </main>
+## ตัวอย่างโจทย์ที่นักศึกษาสามารถเลือกทำ
 
-    <footer class="footer">
-      <div class="container footer-wrap">
-        <div><strong>AI Project Lab</strong><p>ออกแบบสำหรับนักศึกษาฝึกงาน ปวช. คอมพิวเตอร์</p></div>
-        <div><p>Open offline • Easy to use • Creative and practical</p></div>
-      </div>
-    </footer>
+- สร้างเว็บไซต์ร้านกาแฟสไตล์วัยรุ่น
+- สร้างเกมตอบคำถามเรื่องไอที
+- สร้างแอปบันทึกค่าใช้จ่ายรายวัน
+- สร้าง AI ช่วยสรุปบทเรียน
+- สร้างเว็บไซต์ร้านค้าออนไลน์
+- สร้างแอปตรวจสอบความเร็วอินเทอร์เน็ต
+- สร้างเกมจับคู่ภาพ
+- สร้าง AI สร้างคอนเทนต์ TikTok
+- สร้าง dashboard สำหรับรายงานข้อมูล
+- สร้างแอปจัดการเวลาการเรียนและงานกลุ่ม
 
-    <script src="script.js"></script>
-  </body>
-</html>
+## แนวทางการใช้งาน
+
+- ให้เลือกอย่างน้อย 1 โครงการหลักและ 1 โครงการเสริม
+- ใช้ AI เป็นผู้ช่วย ไม่ใช่คนทำแทน
+- ต้องปรับปรุงโค้ดและดีไซน์เอง
+- ทำรายงานภาษาไทยพร้อมภาพหน้าจอ
+- บันทึก Prompt ที่ใช้และสรุปสิ่งที่เรียนรู้
+
+## ตัวอย่าง prompt ภาษาไทย
+
+“สร้างเว็บไซต์สำหรับนักเรียน ปวช. เรื่องร้านกาแฟสไตล์วัยรุ่น 3 หน้า ใช้ HTML CSS JS เปิดได้ทันทีใน browser มีเมนู หน้าแรก โปรโมชั่น เกี่ยวกับร้าน และติดต่อ”
+
+“สร้างเกมตอบคำถามเรื่องไอทีแบบ browser ใช้ JavaScript มีเทมเพลตสวย มีคะแนนและบอกผลสุดท้าย”
+
+“สร้างแอปบันทึกค่าใช้จ่ายรายวัน ใช้ HTML CSS JavaScript ให้สามารถเพิ่ม ลบ แก้ไข และคำนวณยอดรวม”
+
+## ตัวอย่าง prompt ภาษาอังกฤษ
+
+“Create a responsive modern coffee shop landing page for teenagers with HTML, CSS, and JavaScript. Include hero section, menu, promotions, and contact form.”
+
+“Build a simple browser game for students with a timer, score board, multiple-choice questions, and restart button.”
+
+“Create a personal expense tracker web app with add, edit, delete, category selection, total calculation, and daily summary.”
+
+## ข้อแนะนำสำหรับครู
+
+- ให้เด็กเลือกโจทย์ที่ตรงความสนใจ
+- ชักชวนให้ทำงานที่มีความน่าติดตามและนำไปอวดได้
+- สอนนักศึกษาว่าการสั่ง AI ต้องมีโครงสร้างและมีจุดมุ่งหมาย
+- ให้คะแนนจากประสิทธิภาพ การใช้งาน ความสวยงาม และรายงาน
+
+## แนะนำการส่งงาน
+
+นักศึกษาควรส่งงานในรูปแบบต่อไปนี้:
+
+- ไฟล์โค้ดทั้งหมด
+- ภาพหน้าจอหรือสกรีนช็อต
+- รายงานภาษาไทย
+- Prompt ที่ใช้สั่ง AI
+- บันทึกสิ่งที่ได้เรียนรู้และปัญหาที่พบ
+
+## สรุป
+
+ชุดนี้สามารถเปิดใช้งานได้ทันทีบนเครื่องคอมพิวเตอร์ส่วนตัว โดยไม่ต้องใช้ server ภายนอก และเหมาะสำหรับการฝึกงาน การเรียนรู้ AI การพัฒนาโปรเจกต์ และการฝึกสั่งงาน AI ให้กับนักศึกษา ปวช. อย่างเป็นระบบ
+
